@@ -5,6 +5,8 @@ from users.models import CustomUser
 
 class Publication(models.Model):
     title = models.CharField(max_length=255)
+    sources = models.TextField(blank=True)
+    abstract = models.TextField(blank=True)
     cat = models.ForeignKey('category', on_delete=models.PROTECT, null=True)
     publication_year = models.CharField(max_length=4, blank=True)
     keywords = models.TextField(blank=True)

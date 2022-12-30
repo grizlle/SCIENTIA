@@ -1,0 +1,50 @@
+.publication_card{
+  padding: 24px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      width: 95%;
+  }
+
+  .authors {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    margin: 10px 0;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .type {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    margin-right: 20px;
+    display: inline;
+  }
+
+  .year {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    font-variant: small-caps;
+    display: inline;
+  }
+}
+
+.publication_card:hover {
+  transform: scale(1.03)
+}

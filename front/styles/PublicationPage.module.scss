@@ -1,0 +1,58 @@
+.publication {
+  &__title {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 90px 10px 20px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+
+    &__wrapper {
+      position: relative;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__cat {
+    position: absolute;
+    bottom: 9px;
+    right: 18px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    text-transform: uppercase;
+  }
+
+  &__authors {
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+
+    &__title {
+      margin-bottom: 7px;
+    }
+
+    &__author {
+      display: flex;
+      margin-bottom: 7px;
+
+      &__name {
+        align-self: center;
+        display: flex;
+        margin-left: 7px;
+      }
+
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+      }
+    }
+  }
+}
