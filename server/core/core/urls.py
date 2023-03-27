@@ -22,7 +22,7 @@ from rest_framework import routers, permissions
 from rest_framework_swagger.views import get_swagger_view
 
 from publications.views import PublicationsViewSet
-from users.views import UserViewSet
+from users.views import UserViewSet, send_registration_code, register_user
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -44,4 +44,6 @@ urlpatterns = [
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('api/v1/register/', register_user, name='register_user'),
+    path('api/v1/send-registration-code/', send_registration_code),
 ]
