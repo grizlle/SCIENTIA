@@ -1,0 +1,85 @@
+.publicationPage {
+
+  .infoItem {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: black;
+    margin-bottom: 10px;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .splitter {
+    display: flex;
+  }
+
+  .authors {
+    width: 250px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      /* identical to box height */
+
+      display: flex;
+      align-items: center;
+
+      color: #000000;
+    }
+  }
+
+  .authorAvatar {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    margin-right: 15px;
+    color: #FFFFFF;
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .authorItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .category {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 15px;
+  }
+}

@@ -14,11 +14,11 @@ class CustomUser(AbstractUser):
     fio = models.CharField('ФИО', max_length=255, default='', blank=True)
     avatar_url = models.ImageField(upload_to="users/files/%Y/%m/%d", blank=True, null=True)
     #Правки
-    wos_id = models.PositiveIntegerField()
-    scorpus_auth_id = models.PositiveIntegerField()
-    orcid = models.PositiveIntegerField()
-    spin_kod = models.PositiveIntegerField()
-    rinc_auth_id = models.PositiveIntegerField()
+    wos_id = models.PositiveIntegerField(blank=True, default='1')
+    scorpus_auth_id = models.PositiveIntegerField(blank=True, default='1')
+    orcid = models.PositiveIntegerField(blank=True, default='1')
+    spin_kod = models.PositiveIntegerField(blank=True, default='1')
+    rinc_auth_id = models.PositiveIntegerField(blank=True, default='1')
     
     
     

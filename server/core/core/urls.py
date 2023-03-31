@@ -19,9 +19,9 @@ from django.urls import path, include, re_path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import routers, permissions
-from rest_framework_swagger.views import get_swagger_view
-
-from publications.views import PublicationsViewSet
+from django.conf import settings
+from django.conf.urls.static import static
+from publications.views import PublicationsViewSet, FiltersInfoView
 from users.views import UserViewSet, send_registration_code, register_user
 
 schema_view = get_schema_view(
@@ -39,11 +39,15 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),
-    path('api/v1/auth/', include('djoser.urls')),
+    path('api/', include(router.urls)),
+    path('api/auth/', include('djoser.urls')),
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-    path('api/v1/register/', register_user, name='register_user'),
-    path('api/v1/send-registration-code/', send_registration_code),
+    path('api/register/', register_user, name='register_user'),
+    path('api/send-registration-code/', send_registration_code),
+    path('filters_info/publications/', FiltersInfoView.as_view(), name='filters-info'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

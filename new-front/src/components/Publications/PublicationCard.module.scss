@@ -1,0 +1,70 @@
+.publication_card{
+  padding: 9px 10px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  .title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .download {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .bottomContent {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .authors {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .otherInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    div {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 23px;
+      font-variant: all-small-caps;
+    }
+  }
+
+}
+

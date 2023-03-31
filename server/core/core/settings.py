@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     # 'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
     'drf_yasg',
-
+    'corsheaders',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = ['http://localhost:3001', 'http://localhost:3000']
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': []
@@ -74,7 +80,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
