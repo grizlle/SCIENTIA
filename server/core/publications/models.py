@@ -6,7 +6,7 @@ from django.utils import timezone
 
 
 class Publication(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, verbose_name='Название')
     sources = models.TextField(blank=True)
     abstract = models.TextField(blank=True)
     cat = models.ForeignKey('category', on_delete=models.PROTECT, null=True)

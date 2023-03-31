@@ -47,3 +47,4 @@ class PublicationDetailSerializer(serializers.ModelSerializer):
 class FiltersInfoSerializer(serializers.Serializer):
     filter_name = serializers.CharField()
     filter_type = serializers.CharField()
+    filter_client_name = serializers.CharField()
